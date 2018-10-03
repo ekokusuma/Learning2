@@ -9,7 +9,6 @@
 	<packaging>war</packaging>
 	<name>Spring Boot Web JSP Example</name>
 	<description>Spring Boot Web JSP Example</description>
-	<url>https://www.mkyong.com</url>
 	<version>1.0</version>
 
 	<parent>
@@ -70,11 +69,17 @@
 
 	</dependencies>
 	<build>
+		<finalName>spring-boot-web-jsp</finalName>
 		<plugins>
 			<!-- Package as an executable jar/war -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <outputDirectory>target</outputDirectory>
+              		  <warName>ROOT</warName>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
