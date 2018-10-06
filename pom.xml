@@ -5,8 +5,8 @@
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mkyong</groupId>
-	<artifactId>spring-boot-web-jsp</artifactId>
+	<groupId>com.eko</groupId>
+	<artifactId>Learning2</artifactId>
 	<packaging>war</packaging>
 	<name>Spring Boot Web JSP Example</name>
 	<description>Spring Boot Web JSP Example</description>
@@ -45,6 +45,12 @@
 			<artifactId>jstl</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Need this to compile JSP -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -61,13 +67,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Optional, test for static content, bootstrap CSS-->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>3.3.7</version>
-		</dependency>
-
 	</dependencies>
 	<build>
 		<finalName>spring-boot-web-jsp</finalName>
@@ -76,11 +75,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <outputDirectory>target</outputDirectory>
-              		  <warName>ROOT</warName>
-                </configuration>
 			</plugin>
 		</plugins>
 	</build>
